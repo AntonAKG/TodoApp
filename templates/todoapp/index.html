@@ -2,15 +2,15 @@
 
 {% block content %}
     <div style="margin-top: 50px;" class="ui container">
-        <h1 class="ui center aligned header">Мой менеджер задач</h1>
-        <h3 class="test_style">Управляй своим временем!</h3>
+        <h1 class="ui center aligned header">Твій менеджер задач</h1>
+        <h3 class="test_style">Керуй своїм часом</h3>
         <form class="ui form" action="{% url 'add' %}" method="post">
             {% csrf_token %}
             <div class="field">
-                <label>Новая задача</label>
-                <input type="text" name="title" placeholder="Введите название задачи"><br>
+                <label>Нова задача</label>
+                <input type="text" name="title" placeholder="Ведіть назву задачі"><br>
             </div>
-            <button class="ui teal basic button" type="submit">Добавить</button>
+            <button class="ui teal basic button" type="submit">Додати</button>
         </form>
         {% for todo in article %}
 
