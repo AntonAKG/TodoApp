@@ -2,3 +2,57 @@
     text-align: center;
     color: lightgrey;
 }
+
+.align-center{
+    text-align: center;
+    color: black;
+}
+
+.align-center > h1{
+    font-size: revert;
+}
+
+.action-counter{
+    text-align: center;
+}
+
+h3 a{
+    text-decoration: none;
+}
+
+.login{
+    float: left;
+    padding-left: 400px;
+}
+
+.register{
+    float: right;
+    padding-right: 400px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Стилі для підсвічування активної сторінки */
+nav a.active {
+    font-weight: bold;
+}

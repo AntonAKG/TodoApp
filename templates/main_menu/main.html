@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div>
+        <div class="align-center">
+            <h1>Привіт, зайдіть або зареєструйтесь</h1>
+
+        </div>
+
+        <div class="action-counter">
+            <div class="login">
+                <h3><a href="{% url 'login' %}">Login</a></h3>
+            </div>
+
+            <div class="register-link">
+                <h3><a href="{% url 'register' %}">Register</a></h3>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+{% endblock %}

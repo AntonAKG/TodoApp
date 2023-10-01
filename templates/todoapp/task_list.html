@@ -1,6 +1,7 @@
-{% extends 'todoapp/layout.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
+
     <div style="margin-top: 50px;" class="ui container">
         <h1 class="ui center aligned header">Твій менеджер задач</h1>
         <h3 class="test_style">Керуй своїм часом</h3>
@@ -12,19 +13,21 @@
             </div>
             <button class="ui teal basic button" type="submit">Додати</button>
         </form>
-        {% for todo in article %}
+        {% for task in todo %}
+
 
             <div class="ui segment">
-                <p class="ui big header">№{{ todo.id }} {{ todo.title }}</p>
 
-                {% if todo.is_complete == False %}
+                <p class="ui big header">{{ people.id }} {{ task.title }}</p>
+
+                {% if task.is_complete == False %}
                     <span class="ui gray label">Не Закінчено</span>
-                    <a class="ui primary basic button" href="{% url 'update' todo_id=todo.id %}">Закрити</a>
+                    <a class="ui primary basic button" href="{% url 'update' todo_id=task.id %}">Закрити</a>
                 {% else %}
                     <span class="ui green label">Закінчено</span>
-                    <a class="ui blue button" href="{% url 'update' todo_id=todo.id %}">Відкрити</a>
+                    <a class="ui blue button" href="{% url 'update' todo_id=task.id %}">Відкрити</a>
                 {% endif %}
-                <a class="ui negative basic button" href="{% url 'delete' todo_id=todo.id %}">Видалити</a>
+                <a class="ui negative basic button" href="{% url 'delete' todo_id=task.id %}">Видалити</a>
             </div>
 
         {% endfor %}

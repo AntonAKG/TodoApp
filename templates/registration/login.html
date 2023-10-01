@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container-login">
+        <div class="form-multiline">
+
+                <h1>Login</h1>
+
+                <form action="{% url 'login' %}" method="post">
+                    {% csrf_token %}
+
+
+                    {% if form.errors %}
+                        <p>{{ form.errors }}</p>
+                    {% endif %}
+
+                    {{ form }}
+                    <button type="submit" class="btn btn-success">Підтвердити</button>
+                </form>
+
+            </div>
+    </div>
+
+{% endblock %}

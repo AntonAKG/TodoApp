@@ -1,0 +1,11 @@
+.container-login, .container-register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.form-multiline> form, .register>form{
+    width: 400px;
+    margin: 10px;
+}
